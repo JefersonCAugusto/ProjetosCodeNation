@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "u+J7ti3NKuhYBgyTF+chRLImHAEZ+tcgTyYf3ZTkDQA0v2lZBWRwVKblLaTtFYHSN6V/raEuR2o990TsMUO7uA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Guto\\codenation\\csharp-2\\Source\\Source.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Guto\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Guto\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
