@@ -7,7 +7,7 @@ namespace Codenation.Challenge
     public class CesarCypher : ICrypt, IDecrypt
     {
 
-        public int Chave { get; set; }
+        public int Chave { get; private set; }
         public CesarCypher()
         {
             Chave = 3;
