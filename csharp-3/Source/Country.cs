@@ -2,20 +2,24 @@ using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Linq;
+using System;
+using System.Security.Cryptography.X509Certificates;
+
 namespace Codenation.Challenge
 {
     public class Country
     {
 
-        public State[] Top10StatesByArea() 
+        public State[] Top10StatesByArea()
         {
-            string path = @"C:\Users\Guto\codenation\csharp-3\Source\DataBase.txt";   // copiei toda a página do wiki e coloquei em arquivo txt   
-            string[] lines = File.ReadAllLines(path, Encoding.UTF8);
-            Regex rx = new Regex(@"^(\w+ *\w* *\w* *\w*)\t{1}[0-9, ]*\t{1}([0-9, ]*)\t{1}", RegexOptions.None); 
-            State[] st = new State[27];     // as unicas firmas dinâmicas de informar esse indice que pensei foram:
-                                            //instanciar dentro do foreach, mas não acho pratico,
-                                            //fazer um matchs fora do foreach e informar o númeto de match, mas seria 
-                                            //um custo muito alto desnecessário. Alguem sugere algo? 
+            int numbLine = 0;
+            string path = @"C:\Users\Guto\codenation\csharp-3\Source\DataBase.txt";   
+            string[] lines = ReadFile(path, ref numbLine);
+            Regex rx = new Regex(@"^(\w+ *\w* *\w* *\w*)\t{1}[0-9, ]*\t{1}([0-9, ]*)\t{1}", RegexOptions.None);
+            State[] st = new State[numbLine];   //as unicas firmas dinâmicas de informar esse indice que pensei foram:
+                                                //instanciar dentro do foreach, mas não acho pratico,
+                                                //fazer um matchs fora do foreach e informar o númeto de match, mas seria 
+                                                //um custo muito alto desnecessário. Alguem sugere algo? 
             int i = 0;
             foreach (string ln in lines)
             {
@@ -30,9 +34,36 @@ namespace Codenation.Challenge
                     i++;
                 }
             }
+                return st.OrderByDescending(list10 => list10.Area).Take(10).ToArray();               //saída
+            
+            
+        }
 
-            return st.OrderByDescending(list10 => list10.Area).Take(10).ToArray();               //saída
 
+        private static string[] ReadFile(string path,ref int numbLine)
+        {
+            if (!File.Exists(path))     //verifica se existe algum tipo de arquivo
+                throw new FileNotFoundException();              
+             
+            try
+            {                           //recupera a quantidade de linhas do arquivo.
+                numbLine = File.ReadLines(@"C:\Users\Guto\codenation\csharp-3\Source\DataBase.txt").Count();
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine("unexpected error: "+ e.Message);
+            }
+            string[] lines = new string[numbLine];
+            try
+            {                           //le o arquivo.
+                 lines = File.ReadAllLines(path, Encoding.UTF8);
+            
+            }
+            catch(SystemException e)
+            {
+                Console.WriteLine("Unexpected error: " + e.Message);
+            }
+            return lines;               //retorna arquivo.
         }
         private static string CallAcronyn(string name)
         {

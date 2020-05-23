@@ -10,4 +10,4 @@ Results File: C:\Users\Guto\codenation\csharp-3\Source.TestSubmission\results.xm
 Execu‡Æo de Teste Bem-sucedida.
 Total de testes: 2
      Aprovados: 2
-Tempo total: 5,0119 Segundos
+Tempo total: 5,8443 Segundos
