@@ -29,9 +29,10 @@ namespace Source
         {
             Id = id; 
         }
- 
+        
 
-     
+
+
         public override bool Equals(object obj)
         {
             if (!(obj is Player))

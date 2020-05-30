@@ -4,7 +4,14 @@ using System.Text;
 
 namespace Source
 {
-    class Capitain
+    class Captain
     {
+        public long PlayerId { get; set; }
+
+        public Captain(long playerId)
+        {
+            PlayerId = playerId;
+        }
+        
     }
 }
