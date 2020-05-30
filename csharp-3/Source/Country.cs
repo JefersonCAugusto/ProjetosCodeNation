@@ -4,6 +4,7 @@ using System.Text.RegularExpressions;
 using System.Linq;
 using System;
 using System.Security.Cryptography.X509Certificates;
+using System.Collections.Generic;
 
 namespace Codenation.Challenge
 {
@@ -16,10 +17,7 @@ namespace Codenation.Challenge
             string path = @"C:\Users\Guto\codenation\csharp-3\Source\DataBase.txt";   
             string[] lines = ReadFile(path, ref numbLine);
             Regex rx = new Regex(@"^(\w+ *\w* *\w* *\w*)\t{1}[0-9, ]*\t{1}([0-9, ]*)\t{1}", RegexOptions.None);
-            State[] st = new State[numbLine];   //as unicas firmas dinâmicas de informar esse indice que pensei foram:
-                                                //instanciar dentro do foreach, mas não acho pratico,
-                                                //fazer um matchs fora do foreach e informar o númeto de match, mas seria 
-                                                //um custo muito alto desnecessário. Alguem sugere algo? 
+            State[] st = new State[numbLine];                                                                                                                         
             int i = 0;
             foreach (string ln in lines)
             {

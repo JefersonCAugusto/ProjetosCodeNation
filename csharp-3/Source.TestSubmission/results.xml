@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<testsuites time="0.127" tests="2" failures="0">
-  <testsuite id="0" name="Source.TestSubmission.dll" tests="2" failures="0" time="0.127">
-    <testcase classname="Codenation.Challenge.CountryTest" name="Codenation.Challenge.CountryTest.Should_Return_10_Itens_When_Get_Top_10_States" time="0.0790000" />
-    <testcase classname="Codenation.Challenge.CountryTest" name="Codenation.Challenge.CountryTest.Should_Return_Top_10_States_By_Area" time="0.0480000" />
+<testsuites time="0.397" tests="2" failures="0">
+  <testsuite id="0" name="Source.TestSubmission.dll" tests="2" failures="0" time="0.397">
+    <testcase classname="Codenation.Challenge.CountryTest" name="Codenation.Challenge.CountryTest.Should_Return_10_Itens_When_Get_Top_10_States" time="0.3480000" />
+    <testcase classname="Codenation.Challenge.CountryTest" name="Codenation.Challenge.CountryTest.Should_Return_Top_10_States_By_Area" time="0.0490000" />
   </testsuite>
 </testsuites>
