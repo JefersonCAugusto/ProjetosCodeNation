@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Source
 {
-    class Player 
+    public class Player
     {
         public long Id { get; set; }
         public long TeamId { get; set; }
@@ -16,8 +16,9 @@ namespace Source
         public int SkillLevel { get; set; }
         public decimal Salary { get; set; }
 
-        public Player(long id, long teamId, string name, DateTime birthDate, int skillLevel, decimal salary) : this(id)
+        public Player(long id, long teamId, string name, DateTime birthDate, int skillLevel, decimal salary)
         {
+            Id = id;
             TeamId = teamId;
             Name = name;
             BirthDate = birthDate;
@@ -25,25 +26,34 @@ namespace Source
             Salary = salary;
         }
 
-        internal Player(long id)
-        {
-            Id = id; 
-        }
-        
+
+
+        //internal Player(long id)
+        //{
+        //    Id = id;
+        //}
 
 
 
-        public override bool Equals(object obj)
-        {
-            if (!(obj is Player))
-                throw new ArgumentException("Error:Invalid parameter");
-            Player other = obj as Player;
-            return Id.Equals(other.Id);
-        }
 
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
+        //    public override bool Equals(object obj)
+        //    {
+        //        if (!(obj is Player))
+        //            throw new ArgumentException("Error:Invalid parameter");
+        //        Player other = obj as Player;
+        //        return Id.Equals(other.Id);
+        //    }
+
+        //    public override int GetHashCode()
+        //    {
+        //        return base.GetHashCode();
+        //    }
+
+        //    public int CompareTo(object obj)
+        //    {
+        //        Player other = obj as Player;
+        //        return Name.CompareTo(other.Name);
+        //    }
+        //}
     }
 }

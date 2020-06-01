@@ -12,6 +12,8 @@ namespace Source
         {
             PlayerId = playerId;
         }
-        
+        //public long TeamId { get; set; }
+
+
     }
 }
