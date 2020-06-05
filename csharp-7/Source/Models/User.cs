@@ -11,10 +11,14 @@ namespace Source.Models
     [Table("user")]
     public class User
     {
-        [Required]
+       // [ForeignKey("Candidate")]
+       // [ForeignKey("Submission")]
         [Key]
         [Column("id")]
         public int Id { get; set; }
+        public Candidate Candidate { get; set; }
+        public Submission Submission { get; set; }
+
 
         [Required]
         [MaxLength(100)]
@@ -40,8 +44,13 @@ namespace Source.Models
         [Column("created_at")]
         public DateTime CreatedAt { get; set; }
 
-        //chave estrangeira
-       
-    }
+
+        //comportam uma lista de condidatos e submission
+      //  public List<Candidate> Candidates { get; set; }
+      //  public List<Submission> Submissions { get; set; }
+
+        // criar chaves estrangeiras
+
+}
 }
 
