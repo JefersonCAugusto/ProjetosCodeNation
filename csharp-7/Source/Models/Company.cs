@@ -10,6 +10,7 @@ namespace Codenation.Challenge.Models
     {
         [Key]
         [Column("id")]
+        [Required]
         public int Id { get; set; }
     }
 }
