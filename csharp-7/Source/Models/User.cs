@@ -11,7 +11,7 @@ namespace Source.Models
     [Table("user")]
     public class User
     {
-      
+
         [Key]
         [Column("id")]
         public int Id { get; set; }
@@ -44,10 +44,12 @@ namespace Source.Models
 
 
 //foreignKey 
-        public int UserId { get; set; }
+       // public int UserId { get; set; }
 
 // Navigation properties
+        [ForeignKey("UserId")]
         public ICollection<Candidate> Candidates { get; set; }
+        [ForeignKey("UserId")]
         public ICollection<Submission> Submissions { get; set; }
     }
 }

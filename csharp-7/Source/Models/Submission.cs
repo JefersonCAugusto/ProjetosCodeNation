@@ -33,7 +33,9 @@ namespace Source.Models
         //foreignKey 
         // public int Id { get; set; } 
         // Navigation properties
+        [ForeignKey("Id")]
          public User User { get; set; }
+        [ForeignKey("Id")]
          public Challenge Challenge { get; set; }
 
     }

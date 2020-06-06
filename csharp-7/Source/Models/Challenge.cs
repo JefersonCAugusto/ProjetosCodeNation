@@ -30,11 +30,13 @@ namespace Source.Models
         public DateTime CreatedAt { get; set; }
 
         // Foreign key
-        public int ChallengeId { get; set; }
+        //public int ChallengeId { get; set; }
 
 
         // Navigation properties
+        [ForeignKey("ChallengeId")]
         public ICollection<Acceleration> Accelerations { get; set; }
+        [ForeignKey("ChallengeId")]
         public ICollection<Submission> Submissions { get; set; }
 
 

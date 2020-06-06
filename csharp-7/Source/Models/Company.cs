@@ -31,9 +31,10 @@ namespace Codenation.Challenge.Models
 
 
         //foreignKey 
-        public int CompanyId { get; set; }
+        //public int CompanyId { get; set; }
 
         // Navigation properties
+        [ForeignKey("CompanyId")]
         public ICollection<Candidate>   Candidates { get; set; }
     }
 }

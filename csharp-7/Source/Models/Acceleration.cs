@@ -38,11 +38,13 @@ namespace Source.Models
 
 
         // Foreign key
-        public int AccelerationId { get; set; }
+        //public int AccelerationId { get; set; }
 
 
         // Navigation properties
+        [ForeignKey("AccelerationId")]
         public ICollection<Candidate> Candidates { get; set; }
+        [ForeignKey("Id")]
         public Challenge Challenge { get; set; }
 
 
