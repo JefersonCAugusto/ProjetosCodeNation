@@ -23,10 +23,19 @@ namespace Source.Models
         [Required]
         [Column("slug")]
         public string Slug { get; set; }
-        
+
+        [Timestamp]
         [Required]
         [Column("created_at")]
         public DateTime CreatedAt { get; set; }
+
+        // Foreign key
+        public int ChallengeId { get; set; }
+
+
+        // Navigation properties
+        public ICollection<Acceleration> Accelerations { get; set; }
+        public ICollection<Submission> Submissions { get; set; }
 
 
     }

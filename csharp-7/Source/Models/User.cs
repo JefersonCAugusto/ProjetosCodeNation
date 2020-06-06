@@ -11,13 +11,10 @@ namespace Source.Models
     [Table("user")]
     public class User
     {
-       // [ForeignKey("Candidate")]
-       // [ForeignKey("Submission")]
+      
         [Key]
         [Column("id")]
         public int Id { get; set; }
-        public Candidate Candidate { get; set; }
-        public Submission Submission { get; set; }
 
 
         [Required]
@@ -40,17 +37,18 @@ namespace Source.Models
         [Column("password")]
         public string Password { get; set; }
 
+        [Timestamp]
         [Required]
         [Column("created_at")]
         public DateTime CreatedAt { get; set; }
 
 
-        //comportam uma lista de condidatos e submission
-      //  public List<Candidate> Candidates { get; set; }
-      //  public List<Submission> Submissions { get; set; }
+//foreignKey 
+        public int UserId { get; set; }
 
-        // criar chaves estrangeiras
-
-}
+// Navigation properties
+        public ICollection<Candidate> Candidates { get; set; }
+        public ICollection<Submission> Submissions { get; set; }
+    }
 }
 

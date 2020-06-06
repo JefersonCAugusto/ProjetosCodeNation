@@ -5,6 +5,10 @@ namespace Codenation.Challenge.Models
 {
     public class CodenationContext : DbContext
     {
+        public CodenationContext()
+        {
+        }
+
 
         //mapeamento das entidades
         public DbSet<Company> Companies { get; set; }

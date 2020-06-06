@@ -28,18 +28,22 @@ namespace Source.Models
         //foreignkey
         [Required]
         [Column("challenge_id")]
-        [ForeignKey("Challenge")]
+       // [ForeignKey("Challenge")]
         public int ChallengeId { get; set; }
-        public Challenge Challenge { get; set; }
 
+        [Timestamp]
         [Required]
         [Column("created_at")]
         public DateTime CreatedAt { get; set; }
 
-        //aceleraçao possui lista de candidates
-        public List<Candidate> Candidates { get; set; }
+
+        // Foreign key
+        public int AccelerationId { get; set; }
 
 
+        // Navigation properties
+        public ICollection<Candidate> Candidates { get; set; }
+        public Challenge Challenge { get; set; }
 
 
 
