@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Source.Models;
+using Codenation.Challenge.Models;
 namespace Source.ConfigFluentAPI
 {
     public class ConfigCandidate : IEntityTypeConfiguration<Candidate>
@@ -12,10 +12,7 @@ namespace Source.ConfigFluentAPI
             modelBuilder.Property(x => x.AccelerationId).HasColumnName("acceleration_id").IsRequired();
             modelBuilder.Property(x => x.CompanyId).HasColumnName("company_id").IsRequired();
             modelBuilder.Property(x => x.Status).HasColumnName("status").IsRequired();
-            modelBuilder.Property(x => x.CreatedAt).HasColumnName("created_at").HasColumnType("timestamp").IsRequired();
-
-            //relacionametno para 1
-            //modelBuilder.HasKey(x => new { x.UserId, x.AccelerationId,x.CompanyId });
+            modelBuilder.Property(x => x.CreatedAt).HasColumnName("created_at").IsRequired();
         }
     }
 }

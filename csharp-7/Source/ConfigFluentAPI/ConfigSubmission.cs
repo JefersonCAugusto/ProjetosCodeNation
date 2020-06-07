@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Source.Models;
+using Codenation.Challenge.Models;
 using System.Security.Cryptography.X509Certificates;
 
 namespace Source.ConfigFluentAPI
@@ -14,9 +14,6 @@ namespace Source.ConfigFluentAPI
             modelBuilder.Property(x => x.ChallengeId).HasColumnName("challenge_id").IsRequired();
             modelBuilder.Property(x => x.Score).HasColumnName("score").IsRequired();
             modelBuilder.Property(x => x.CreatedAt).HasColumnName("created_at").IsRequired();
-
-            //relacionamento
-           
-            }
+        }
     }
 }
