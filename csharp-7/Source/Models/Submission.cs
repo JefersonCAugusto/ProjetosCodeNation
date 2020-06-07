@@ -8,35 +8,18 @@ using System.Threading.Tasks;
 
 namespace Source.Models
 {
-    [Table("submission")]
     public class Submission
     {
-        [Required]
-        [Key]
-        [Column("id_user")]
         public int UserId { get; set; }
-
-
-        [Required]
-        [Column("challenge_id")]
         public int ChallengeId { get; set; }
-
-        [Required]
-        [Column("score")]
-        public  Decimal Score { get; set; }
-
-        [Timestamp]
-        [Required]
-        [Column("created_at")]
+        public  decimal Score { get; set; }
         public DateTime CreatedAt { get; set; }
 
         //foreignKey 
         // public int Id { get; set; } 
         // Navigation properties
-        [ForeignKey("Id")]
-         public User User { get; set; }
-        [ForeignKey("Id")]
-         public Challenge Challenge { get; set; }
+       public User User { get; set; }
+       public Challenge Challenge { get; set; }
 
     }
 }

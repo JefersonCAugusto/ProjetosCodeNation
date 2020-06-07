@@ -22,11 +22,16 @@ namespace Codenation.Challenge.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new ConfigAcceleration());
+
+
             modelBuilder.ApplyConfiguration(new ConfigCandidate());
+           // modelBuilder.Entity<Candidate>().HasOne<User>(x => x.UserId).WithOne(x => x.Id).HasForeignkey<User>(x=>x.Id);
+
             modelBuilder.ApplyConfiguration(new ConfigChallenge());
             modelBuilder.ApplyConfiguration(new ConfigCompany());
             modelBuilder.ApplyConfiguration(new ConfigSubmission());
             modelBuilder.ApplyConfiguration(new ConfigUser());
+            
         }
     }
 }
