@@ -32,7 +32,20 @@ namespace Codenation.Challenge.Models
         [Required]
         public DateTime CreatedAt { get; set; }
 
-        public virtual ICollection<Candidate> Candidates { get; set; }        
+        public virtual ICollection<Candidate> Candidates { get; set; }
 
+        public Acceleration(int id, string name, string slug, int challengeId, Challenge challenge, DateTime createdAt)
+        {
+            Id = id;
+            Name = name;
+            Slug = slug;
+            ChallengeId = challengeId;
+            Challenge = challenge;
+            CreatedAt = createdAt;
+        }
+        public Acceleration()
+        {
+
+        }
     }
 }

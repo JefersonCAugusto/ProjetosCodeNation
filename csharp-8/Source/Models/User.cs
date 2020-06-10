@@ -40,5 +40,18 @@ namespace Codenation.Challenge.Models
 
         public virtual ICollection<Submission> Submissions { get; set; }
 
+        public User(string fullName, string email, string nickname, string password, DateTime createdAt)
+        {
+           
+            FullName = fullName;
+            Email = email;
+            Nickname = nickname;
+            Password = password;
+            CreatedAt = createdAt;
+        }
+
+        public User()
+        {
+        }
     }
 }

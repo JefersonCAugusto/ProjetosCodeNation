@@ -33,5 +33,20 @@ namespace Codenation.Challenge.Models
         [Required]
         public DateTime CreatedAt { get; set; }
 
+        public Candidate(int userId, User user, int accelerationId, Acceleration acceleration, int companyId, Company company, int status, DateTime createdAt)
+        {
+            UserId = userId;
+            User = user;
+            AccelerationId = accelerationId;
+            Acceleration = acceleration;
+            CompanyId = companyId;
+            Company = company;
+            Status = status;
+            CreatedAt = createdAt;
+        }
+        public Candidate()
+        {
+
+        }
     }
 }

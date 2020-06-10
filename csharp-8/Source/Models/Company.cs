@@ -28,5 +28,16 @@ namespace Codenation.Challenge.Models
 
         public virtual ICollection<Candidate> Candidates { get; set; }
 
+        public Company(string name, string slug, DateTime createdAt)
+        {
+         
+            Name = name;
+            Slug = slug;
+            CreatedAt = createdAt;
+        }
+
+        public Company()
+        {
+        }
     }
 }

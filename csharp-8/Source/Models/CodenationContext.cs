@@ -15,8 +15,8 @@ namespace Codenation.Challenge.Models
         public CodenationContext(DbContextOptions<CodenationContext> options)
             : base(options)
         {             
-        }                
-
+        }
+      
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

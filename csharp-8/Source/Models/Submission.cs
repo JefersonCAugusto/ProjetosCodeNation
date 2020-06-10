@@ -27,5 +27,18 @@ namespace Codenation.Challenge.Models
         [Required]
         public DateTime CreatedAt { get; set; }
 
+        public Submission(int userId, User user, int challengeId, Challenge challenge, decimal score, DateTime createdAt)
+        {
+            UserId = userId;
+            User = user;
+            ChallengeId = challengeId;
+            Challenge = challenge;
+            Score = score;
+            CreatedAt = createdAt;
+        }
+
+        public Submission()
+        {
+        }
     }
 }

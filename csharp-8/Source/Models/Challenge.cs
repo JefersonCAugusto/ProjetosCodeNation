@@ -30,6 +30,15 @@ namespace Codenation.Challenge.Models
 
         public virtual ICollection<Submission> Submissions { get; set; }
 
+        public Challenge(string name, string slug, DateTime createdAt)
+        {
+            Name = name;
+            Slug = slug;
+            CreatedAt = createdAt;
+        }
 
+        public Challenge()
+        {
+        }
     }
 }
