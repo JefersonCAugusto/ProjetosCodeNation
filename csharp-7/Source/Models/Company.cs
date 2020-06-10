@@ -8,7 +8,8 @@ namespace Codenation.Challenge.Models
         public string  Name { get; set; }
         public string Slug { get; set; }
         public DateTime CreatedAt { get; set; }
-        // Navigation properties
+        #region// Navigation properties
         public ICollection<Candidate> Candidates { get; set; }
+        #endregion
     }
 }

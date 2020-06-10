@@ -7,8 +7,9 @@ namespace Codenation.Challenge.Models
         public int ChallengeId { get; set; }
         public  decimal Score { get; set; }
         public DateTime CreatedAt { get; set; }
-        // Navigation properties
+        #region// Navigation properties
         public User User { get; set; }
-        public Challenge Challenge { get; set; }
+        public Codenation.Challenge.Models.Challenge Challenge { get; set; }
+        #endregion
     }
 }

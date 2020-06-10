@@ -8,9 +8,10 @@ namespace Codenation.Challenge.Models
         public int CompanyId { get; set; }
         public int Status { get; set; }
         public DateTime CreatedAt { get; set; }
-        //Navigation Properties
+        #region// Navigation properties
         public User User { get; set; }
         public Acceleration Acceleration { get; set; }
         public Company Company { get; set; }
+        #endregion
     }
 }
