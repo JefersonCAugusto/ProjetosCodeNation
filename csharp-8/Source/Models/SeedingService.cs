@@ -41,7 +41,7 @@ namespace Source.Models
             _context.Companies.AddRange(co1, co2);
             _context.Challenges.AddRange(ch1, ch2);
 
-            _context.SaveChanges();  //alterar para assincrono
+            _context.SaveChanges();  
 
         }
     }

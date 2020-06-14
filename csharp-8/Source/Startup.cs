@@ -36,7 +36,7 @@ namespace Source
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                seedingService.Seed();
+                //seedingService.Seed();  //   method to perform debugging
             }
 
             app.UseMvc();
